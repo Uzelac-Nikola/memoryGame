@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background: rgb(15%, 15%, 15%);
+    font-family: sans-serif;
+    transition: .6s;
+}
+
+#winScreen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: background .4s;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#winScreen p {
+    color: white;
+    font-size: 60px;
+    transform: translateY(-70vh);
+    user-select: none;
+    text-shadow: 2px 2px 0 black;
+}
+
+#intro,
+#game {
+    width: 95%;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient(rgba(70%, 70%, 70%, .2), rgba(70%, 70%, 70%, .3));
+    box-shadow: 2px 2px 1px gray;
+}
+
+#intro span {
+    color: brown;
+    text-shadow: 1px 1px black, 1px -1px black, -1px 1px black, -1px -1px black;
+}
+
+#game {
+    min-height: 450px;
+    margin-bottom: 10px;
+}
+
+#settings {
+    font-size: 22px;
+    background: rgba(0, 0, 0, .2);
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#settings button {
+    width: 60px;
+    height: 26px;
+    cursor: pointer;
+}
+
+#play-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tile {
+    height: 110px;
+    width: 110px;
+    margin: 20px;
+    border: 1px solid;
+    background: linear-gradient(rgba(255, 0, 0, .6), brown);
+    cursor: pointer;
+}
+
+.tile p {
+    font-size: 30px;
+    margin: 0;
+    padding: 35%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: blur(20px);
+    user-select: none;
+}
+
+.matched {
+    border-radius: 50%;
+    transition: 1s;
+    background: blue;
+}
+
+.matched p {
+    filter: blur(0px);
+}
